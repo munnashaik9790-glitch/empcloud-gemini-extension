@@ -8,7 +8,7 @@
     "empcloud-search": "./dist/index.js"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && esbuild src/index.ts --bundle --platform=node --format=esm --target=node20 --packages=bundle --outfile=dist/index.js",
     "watch": "tsc --watch",
     "test": "vitest run",
     "test:watch": "vitest",
@@ -39,6 +39,7 @@
   },
   "devDependencies": {
     "@types/node": "^20.17.19",
+    "esbuild": "^0.28.2",
     "typescript": "^5.7.3",
     "vitest": "^2.1.8"
   },
