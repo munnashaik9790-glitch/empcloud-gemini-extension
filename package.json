@@ -1,0 +1,48 @@
+{
+  "name": "empcloud-gemini-extension",
+  "version": "1.0.0",
+  "description": "EmpCloud Product and Resource Search extension for Gemini CLI",
+  "type": "module",
+  "main": "./dist/index.js",
+  "bin": {
+    "empcloud-search": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:manual": "node scripts/manual-test.js",
+    "prepare": "npm run build",
+    "start": "node dist/index.js"
+  },
+  "files": [
+    "dist",
+    "gemini-extension.json",
+    "GEMINI.md",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "gemini",
+    "gemini-cli",
+    "mcp",
+    "model-context-protocol",
+    "empcloud",
+    "wordpress"
+  ],
+  "author": "EmpCloud Gemini CLI Extension Developer",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.6.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.19",
+    "typescript": "^5.7.3",
+    "vitest": "^2.1.8"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

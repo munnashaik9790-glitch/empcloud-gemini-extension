@@ -1,0 +1,14 @@
+{
+  "name": "empcloud",
+  "version": "1.0.0",
+  "description": "EmpCloud Product and Resource Search extension for Gemini CLI. Search publicly available products, modules, and documentation from empcloud.com.",
+  "contextFileName": "GEMINI.md",
+  "mcpServers": {
+    "empcloud": {
+      "command": "node",
+      "args": [
+        "${extensionPath}/dist/index.js"
+      ]
+    }
+  }
+}
